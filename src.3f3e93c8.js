@@ -154,4 +154,4 @@ var r=require("./internal/_curry2"),e=r(function(r,e){return Array.prototype.sli
 },{"react":"1n8/","wouter":"RIxh","./withdraw/Withdraw":"zhfS","./settings/Settings":"dAaC","./navigation/Navigation":"09Rz","./App.css":"7r7p"}],"zo2T":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};exports.__esModule=!0;var t=e(require("react")),r=e(require("react-dom")),u=e(require("./components/app"));require("./index.css"),r.default.render(t.default.createElement(u.default,null),document.getElementById("root"));
 },{"react":"1n8/","react-dom":"NKHc","./components/app":"DKsQ","./index.css":"7r7p"}]},{},["zo2T"], null)
-//# sourceMappingURL=/src.3f3e93c8.js.map
+//# sourceMappingURL=/cash-machine/src.3f3e93c8.js.map
