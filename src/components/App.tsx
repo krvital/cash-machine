@@ -4,7 +4,7 @@ import Withdraw from './withdraw/Withdraw';
 import Settings from './settings/Settings';
 import Navigation from './navigation/Navigation';
 
-import { AvailableNotes } from '../models';
+import { AvailableNotes, Pages } from '../models';
 import './App.css';
 
 export default function App() {
@@ -12,8 +12,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <Route path="/withdraw" component={() => <Withdraw availableNotes={notes} />} />
-      <Route path="/settings" component={() => <Settings availableNotes={notes} setNotes={setNotes} />} />
+      <Route path={Pages.withdraw} component={() => <Withdraw availableNotes={notes} />} />
+      <Route path={Pages.settings} component={() => <Settings availableNotes={notes} setNotes={setNotes} />} />
       <Navigation />
     </div>
   );

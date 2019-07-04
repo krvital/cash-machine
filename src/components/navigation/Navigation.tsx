@@ -1,32 +1,27 @@
 import React from 'react';
 import { Link, useLocation } from 'wouter';
+import { Pages } from '../../models';
 import './Navigation.css';
-
-enum Page {
-  main = '/',
-  withdraw = '/withdraw',
-  settings = '/settings'
-}
 
 export default function Navigation() {
   const [location] = useLocation();
 
   return (
     <div className="navigation">
-      {location !== Page.main && (
-        <Link href={Page.main}>
+      {location !== Pages.main && (
+        <Link href={Pages.main}>
           <a className="button navigation__link">Back</a>
         </Link>
       )}
 
-      {location !== Page.withdraw && (
-        <Link href={Page.withdraw}>
+      {location !== Pages.withdraw && (
+        <Link href={Pages.withdraw}>
           <a className="button navigation__link">Withdraw</a>
         </Link>
       )}
 
-      {location !== Page.settings && (
-        <Link href={Page.settings}>
+      {location !== Pages.settings && (
+        <Link href={Pages.settings}>
           <a className="button navigation__link">Settings</a>
         </Link>
       )}
