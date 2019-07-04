@@ -1,0 +1,11 @@
+.navigation {
+  text-align: center;
+}
+
+.navigation__link {
+  margin-right: 10px;
+}
+
+.navigation__link:last-child {
+  margin-right: 0;
+}

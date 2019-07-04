@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "downlevelIteration": true
+  }
+}

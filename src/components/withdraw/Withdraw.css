@@ -1,0 +1,12 @@
+.withdraw {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.withdraw__result {
+  margin-top: 50px;
+}
+
+.withdraw__result input {
+  text-align: center;
+}
