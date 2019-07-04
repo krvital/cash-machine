@@ -28367,7 +28367,17 @@ function Settings(_a) {
 }
 
 exports["default"] = Settings;
-},{"react":"../node_modules/react/index.js","../../utils":"utils/index.ts","./Settings.css":"components/settings/Settings.css"}],"components/navigation/Navigation.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../../utils":"utils/index.ts","./Settings.css":"components/settings/Settings.css"}],"models/index.ts":[function(require,module,exports) {
+"use strict";
+
+exports.__esModule = true;
+var baseUrl = undefined || '/';
+exports.Pages = {
+  main: baseUrl,
+  withdraw: baseUrl + 'withdraw',
+  settings: baseUrl + 'settings'
+};
+},{}],"components/navigation/Navigation.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -28414,15 +28424,9 @@ var react_1 = __importDefault(require("react"));
 
 var wouter_1 = require("wouter");
 
+var models_1 = require("../../models");
+
 require("./Navigation.css");
-
-var Page;
-
-(function (Page) {
-  Page["main"] = "/";
-  Page["withdraw"] = "/withdraw";
-  Page["settings"] = "/settings";
-})(Page || (Page = {}));
 
 function Navigation() {
   var _a = __read(wouter_1.useLocation(), 1),
@@ -28430,23 +28434,23 @@ function Navigation() {
 
   return react_1["default"].createElement("div", {
     className: "navigation"
-  }, location !== Page.main && react_1["default"].createElement(wouter_1.Link, {
-    href: Page.main
+  }, location !== models_1.Pages.main && react_1["default"].createElement(wouter_1.Link, {
+    href: models_1.Pages.main
   }, react_1["default"].createElement("a", {
     className: "button navigation__link"
-  }, "Back")), location !== Page.withdraw && react_1["default"].createElement(wouter_1.Link, {
-    href: Page.withdraw
+  }, "Back")), location !== models_1.Pages.withdraw && react_1["default"].createElement(wouter_1.Link, {
+    href: models_1.Pages.withdraw
   }, react_1["default"].createElement("a", {
     className: "button navigation__link"
-  }, "Withdraw")), location !== Page.settings && react_1["default"].createElement(wouter_1.Link, {
-    href: Page.settings
+  }, "Withdraw")), location !== models_1.Pages.settings && react_1["default"].createElement(wouter_1.Link, {
+    href: models_1.Pages.settings
   }, react_1["default"].createElement("a", {
     className: "button navigation__link"
   }, "Settings")));
 }
 
 exports["default"] = Navigation;
-},{"react":"../node_modules/react/index.js","wouter":"../node_modules/wouter/index.js","./Navigation.css":"components/navigation/Navigation.css"}],"components/App.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","wouter":"../node_modules/wouter/index.js","../../models":"models/index.ts","./Navigation.css":"components/navigation/Navigation.css"}],"components/App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -28509,6 +28513,8 @@ var Settings_1 = __importDefault(require("./settings/Settings"));
 
 var Navigation_1 = __importDefault(require("./navigation/Navigation"));
 
+var models_1 = require("../models");
+
 require("./App.css");
 
 function App() {
@@ -28519,14 +28525,14 @@ function App() {
   return react_1["default"].createElement("div", {
     className: "app"
   }, react_1["default"].createElement(wouter_1.Route, {
-    path: "/withdraw",
+    path: models_1.Pages.withdraw,
     component: function component() {
       return react_1["default"].createElement(Withdraw_1["default"], {
         availableNotes: notes
       });
     }
   }), react_1["default"].createElement(wouter_1.Route, {
-    path: "/settings",
+    path: models_1.Pages.settings,
     component: function component() {
       return react_1["default"].createElement(Settings_1["default"], {
         availableNotes: notes,
@@ -28537,7 +28543,7 @@ function App() {
 }
 
 exports["default"] = App;
-},{"react":"../node_modules/react/index.js","wouter":"../node_modules/wouter/index.js","./withdraw/Withdraw":"components/withdraw/Withdraw.tsx","./settings/Settings":"components/settings/Settings.tsx","./navigation/Navigation":"components/navigation/Navigation.tsx","./App.css":"components/App.css"}],"index.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","wouter":"../node_modules/wouter/index.js","./withdraw/Withdraw":"components/withdraw/Withdraw.tsx","./settings/Settings":"components/settings/Settings.tsx","./navigation/Navigation":"components/navigation/Navigation.tsx","../models":"models/index.ts","./App.css":"components/App.css"}],"index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -28590,7 +28596,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49874" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
