@@ -18,11 +18,11 @@
     "@types/jest-environment-puppeteer": "^4.3.2",
     "@types/puppeteer": "^3.0.2",
     "gh-pages": "^2.0.1",
-    "jest": "^24.8.0",
+    "jest": "^26.4.2",
     "jest-puppeteer": "^4.4.0",
     "parcel-bundler": "^1.12.4",
     "puppeteer": "^5.3.1",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "^26.4.0",
     "typescript": "^3.5.2"
   },
   "dependencies": {
