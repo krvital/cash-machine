@@ -8,5 +8,5 @@ npm install
 ## Run
 ```
 npm run dev
-open https://localhost:1234
+open http://localhost:1234
 ```
